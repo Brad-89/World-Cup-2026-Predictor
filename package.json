@@ -9,6 +9,10 @@
     "build": "cd client && npm install && npm run build",
     "start": "NODE_ENV=production node server/index.js"
   },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  },
   "devDependencies": {
     "concurrently": "^8.2.2"
   }
