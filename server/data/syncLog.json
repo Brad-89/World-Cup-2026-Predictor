@@ -1,0 +1,28 @@
+[
+  {
+    "timestamp": "2026-06-11T14:19:57.501Z",
+    "status": "success",
+    "teamsCount": 48,
+    "matchesCount": 104
+  },
+  {
+    "timestamp": "2026-06-11T14:18:46.581Z",
+    "status": "error",
+    "error": "FOOTBALL_DATA_API_KEY not set"
+  },
+  {
+    "timestamp": "2026-06-11T14:18:39.457Z",
+    "status": "error",
+    "error": "FOOTBALL_DATA_API_KEY not set"
+  },
+  {
+    "timestamp": "2026-06-11T14:18:38.689Z",
+    "status": "error",
+    "error": "FOOTBALL_DATA_API_KEY not set"
+  },
+  {
+    "timestamp": "2026-06-11T14:18:37.159Z",
+    "status": "error",
+    "error": "FOOTBALL_DATA_API_KEY not set"
+  }
+]

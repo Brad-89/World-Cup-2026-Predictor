@@ -1,0 +1,21 @@
+{
+  "goalsFor": 0.20,
+  "goalsAgainst": 0.18,
+  "shotAccuracy": 0.12,
+  "shotsOnTarget": 0.10,
+  "possession": 0.08,
+  "passAccuracy": 0.07,
+  "form": 0.15,
+  "opponentStrength": 0.05,
+  "knockoutBonus": 0.05,
+  "headToHead": 0.00,
+  "formDecayLambda": 0.35,
+  "knockoutMultipliers": {
+    "Group": 1.0,
+    "R32": 1.05,
+    "R16": 1.12,
+    "QF": 1.22,
+    "SF": 1.35,
+    "F": 1.50
+  }
+}

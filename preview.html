@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>World Cup 2026 — Winner Predictor</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { pitch: '#1a3a2a', gold: '#c9a227' }
+        }
+      }
+    }
+  </script>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/recharts@2/umd/Recharts.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    body { background: #030712; color: #f9fafb; font-family: system-ui, sans-serif; }
+    input[type=range] { accent-color: #10b981; }
+    ::-webkit-scrollbar { width: 4px; } ::-webkit-scrollbar-track { background: #111827; }
+    ::-webkit-scrollbar-thumb { background: #374151; border-radius: 4px; }
+  </style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+
+// ── Mock Data ──────────────────────────────────────────────────────────────────
+const MOCK_TEAMS = [
+  { teamId:'1', name:'Brazil', flag:'🇧🇷', gamesPlayed:4, wins:3, draws:1, losses:0, goalsFor:10, goalsAgainst:3, shotsOnTarget:32, shotsTotal:68, possession:62, passAccuracy:88, currentStage:'QF', probabilityHistory:[{timestamp:'2026-06-15T12:00:00Z',probability:14.2},{timestamp:'2026-06-18T12:00:00Z',probability:15.8},{timestamp:'2026-06-22T12:00:00Z',probability:17.1},{timestamp:'2026-06-26T12:00:00Z',probability:18.9},{timestamp:'2026-06-30T12:00:00Z',probability:20.4}] },
+  { teamId:'4', name:'Spain', flag:'🇪🇸', gamesPlayed:4, wins:3, draws:1, losses:0, goalsFor:11, goalsAgainst:3, shotsOnTarget:35, shotsTotal:72, possession:65, passAccuracy:91, currentStage:'QF', probabilityHistory:[{timestamp:'2026-06-15T12:00:00Z',probability:12.8},{timestamp:'2026-06-18T12:00:00Z',probability:14.0},{timestamp:'2026-06-22T12:00:00Z',probability:15.5},{timestamp:'2026-06-26T12:00:00Z',probability:16.8},{timestamp:'2026-06-30T12:00:00Z',probability:18.1}] },
+  { teamId:'2', name:'France', flag:'🇫🇷', gamesPlayed:4, wins:3, draws:0, losses:1, goalsFor:9, goalsAgainst:4, shotsOnTarget:28, shotsTotal:58, possession:58, passAccuracy:86, currentStage:'QF', probabilityHistory:[{timestamp:'2026-06-15T12:00:00Z',probability:13.5},{timestamp:'2026-06-18T12:00:00Z',probability:14.2},{timestamp:'2026-06-22T12:00:00Z',probability:13.8},{timestamp:'2026-06-26T12:00:00Z',probability:15.6},{timestamp:'2026-06-30T12:00:00Z',probability:16.2}] },
+  { teamId:'3', name:'England', flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿', gamesPlayed:4, wins:2, draws:2, losses:0, goalsFor:7, goalsAgainst:3, shotsOnTarget:24, shotsTotal:52, possession:55, passAccuracy:84, currentStage:'QF', probabilityHistory:[{timestamp:'2026-06-15T12:00:00Z',probability:11.0},{timestamp:'2026-06-18T12:00:00Z',probability:11.5},{timestamp:'2026-06-22T12:00:00Z',probability:12.3},{timestamp:'2026-06-26T12:00:00Z',probability:13.1},{timestamp:'2026-06-30T12:00:00Z',probability:13.8}] },
+  { teamId:'6', name:'Argentina', flag:'🇦🇷', gamesPlayed:4, wins:3, draws:0, losses:1, goalsFor:9, goalsAgainst:5, shotsOnTarget:27, shotsTotal:55, possession:54, passAccuracy:83, currentStage:'QF', probabilityHistory:[{timestamp:'2026-06-15T12:00:00Z',probability:11.5},{timestamp:'2026-06-18T12:00:00Z',probability:12.0},{timestamp:'2026-06-22T12:00:00Z',probability:11.2},{timestamp:'2026-06-26T12:00:00Z',probability:10.8},{timestamp:'2026-06-30T12:00:00Z',probability:11.5}] },
+  { teamId:'5', name:'Germany', flag:'🇩🇪', gamesPlayed:4, wins:2, draws:1, losses:1, goalsFor:8, goalsAgainst:5, shotsOnTarget:26, shotsTotal:60, possession:57, passAccuracy:85, currentStage:'R16', probabilityHistory:[{timestamp:'2026-06-15T12:00:00Z',probability:10.5},{timestamp:'2026-06-18T12:00:00Z',probability:9.8},{timestamp:'2026-06-22T12:00:00Z',probability:10.2},{timestamp:'2026-06-26T12:00:00Z',probability:9.5},{timestamp:'2026-06-30T12:00:00Z',probability:9.8}] },
+  { teamId:'7', name:'Portugal', flag:'🇵🇹', gamesPlayed:3, wins:2, draws:0, losses:1, goalsFor:6, goalsAgainst:4, shotsOnTarget:22, shotsTotal:48, possession:52, passAccuracy:82, currentStage:'R16', probabilityHistory:[{timestamp:'2026-06-15T12:00:00Z',probability:8.0},{timestamp:'2026-06-18T12:00:00Z',probability:7.5},{timestamp:'2026-06-22T12:00:00Z',probability:7.0},{timestamp:'2026-06-26T12:00:00Z',probability:6.8},{timestamp:'2026-06-30T12:00:00Z',probability:6.5}] },
+  { teamId:'8', name:'Netherlands', flag:'🇳🇱', gamesPlayed:3, wins:1, draws:1, losses:1, goalsFor:4, goalsAgainst:4, shotsOnTarget:18, shotsTotal:44, possession:50, passAccuracy:80, currentStage:'R16', probabilityHistory:[{timestamp:'2026-06-15T12:00:00Z',probability:6.0},{timestamp:'2026-06-18T12:00:00Z',probability:5.5},{timestamp:'2026-06-22T12:00:00Z',probability:5.2},{timestamp:'2026-06-26T12:00:00Z',probability:4.8},{timestamp:'2026-06-30T12:00:00Z',probability:4.5}] },
+];
+
+const MOCK_MATCHES = [
+  { matchId:'m1', date:'2026-06-15T18:00:00Z', status:'FINISHED', stage:'Group', homeTeamId:'1', homeTeamName:'Brazil', awayTeamId:'8', awayTeamName:'Netherlands', homeScore:3, awayScore:1, stats:{possession:{home:62,away:38},shotsOnTarget:{home:8,away:3}} },
+  { matchId:'m2', date:'2026-06-15T21:00:00Z', status:'FINISHED', stage:'Group', homeTeamId:'4', homeTeamName:'Spain', awayTeamId:'7', awayTeamName:'Portugal', homeScore:2, awayScore:1, stats:{possession:{home:65,away:35},shotsOnTarget:{home:9,away:5}} },
+  { matchId:'m3', date:'2026-06-19T18:00:00Z', status:'FINISHED', stage:'Group', homeTeamId:'2', homeTeamName:'France', awayTeamId:'5', awayTeamName:'Germany', homeScore:2, awayScore:0, stats:{possession:{home:58,away:42},shotsOnTarget:{home:7,away:4}} },
+  { matchId:'m4', date:'2026-06-19T21:00:00Z', status:'FINISHED', stage:'Group', homeTeamId:'3', homeTeamName:'England', awayTeamId:'6', awayTeamName:'Argentina', homeScore:1, awayScore:1, stats:{possession:{home:55,away:45},shotsOnTarget:{home:6,away:7}} },
+  { matchId:'m5', date:'2026-06-27T20:00:00Z', status:'FINISHED', stage:'R16', homeTeamId:'1', homeTeamName:'Brazil', awayTeamId:'7', awayTeamName:'Portugal', homeScore:2, awayScore:0, stats:{} },
+  { matchId:'m6', date:'2026-06-28T20:00:00Z', status:'FINISHED', stage:'R16', homeTeamId:'4', homeTeamName:'Spain', awayTeamId:'5', awayTeamName:'Germany', homeScore:3, awayScore:2, stats:{} },
+  { matchId:'m7', date:'2026-07-04T20:00:00Z', status:'FINISHED', stage:'QF', homeTeamId:'1', homeTeamName:'Brazil', awayTeamId:'6', awayTeamName:'Argentina', homeScore:2, awayScore:1, stats:{} },
+  { matchId:'m8', date:'2026-07-05T20:00:00Z', status:'SCHEDULED', stage:'QF', homeTeamId:'4', homeTeamName:'Spain', awayTeamId:'2', awayTeamName:'France', homeScore:null, awayScore:null, stats:{} },
+];
+
+const DEFAULT_WEIGHTS = { goalsFor:0.20, goalsAgainst:0.18, shotAccuracy:0.12, shotsOnTarget:0.10, possession:0.08, passAccuracy:0.07, form:0.15, opponentStrength:0.05, knockoutBonus:0.05, formDecayLambda:0.35, knockoutMultipliers:{Group:1.0,R32:1.05,R16:1.12,QF:1.22,SF:1.35,F:1.50} };
+
+const FACTOR_LABELS = { goalsFor:'Goals Scored', goalsAgainst:'Goals Conceded', shotAccuracy:'Shot Accuracy', shotsOnTarget:'Shots on Target', possession:'Possession', passAccuracy:'Pass Accuracy', form:'Recent Form', opponentStrength:'Opponent Strength', knockoutBonus:'Stage Reached' };
+
+// ── Prediction Engine ──────────────────────────────────────────────────────────
+function computeFormScore(team, matches, lambda) {
+  const tm = matches.filter(m => m.status==='FINISHED' && (m.homeTeamId===team.teamId||m.awayTeamId===team.teamId)).sort((a,b)=>new Date(b.date)-new Date(a.date));
+  if (!tm.length) return 0.5;
+  let ws=0, tw=0;
+  tm.forEach((m,i)=>{ const w=Math.exp(-lambda*i); const isH=m.homeTeamId===team.teamId; const ts=isH?m.homeScore:m.awayScore; const os=isH?m.awayScore:m.homeScore; const r=ts>os?1:ts===os?0.5:0; ws+=r*w; tw+=w; });
+  return tw>0?ws/tw:0.5;
+}
+
+function norm(v,mn,mx){ return mx===mn?0.5:Math.max(0,Math.min(1,(v-mn)/(mx-mn))); }
+
+function predict(teams, matches, weights) {
+  if (!teams.length) return [];
+  const stageRank={Group:1,R32:2,R16:3,QF:4,SF:5,F:6};
+  const raw = teams.map(team=>{
+    const gp=team.gamesPlayed||1;
+    const form=computeFormScore(team,matches,weights.formDecayLambda);
+    const tm=matches.filter(m=>m.status==='FINISHED'&&(m.homeTeamId===team.teamId||m.awayTeamId===team.teamId));
+    const avgOpp=tm.length?tm.reduce((s,m)=>{ const oId=m.homeTeamId===team.teamId?m.awayTeamId:m.homeTeamId; const o=teams.find(t=>t.teamId===oId); return s+(stageRank[o?.currentStage]||1); },0)/tm.length:2;
+    return { team, rs:{ goalsFor:team.goalsFor/gp, goalsAgainst:team.goalsAgainst/gp, shotAccuracy:team.shotsTotal>0?team.shotsOnTarget/team.shotsTotal:0, shotsOnTarget:team.shotsOnTarget/gp, possession:team.possession/100, passAccuracy:team.passAccuracy/100, form, opponentStrength:Math.min(1.2,Math.max(0.8,0.9+avgOpp*0.05)), knockoutBonus:weights.knockoutMultipliers?.[team.currentStage]||1 } };
+  });
+  const dims=['goalsFor','goalsAgainst','shotAccuracy','shotsOnTarget','possession','passAccuracy','form','opponentStrength','knockoutBonus'];
+  const ranges={};
+  dims.forEach(d=>{ const vs=raw.map(r=>r.rs[d]); ranges[d]={min:Math.min(...vs),max:Math.max(...vs)}; });
+  const scored=raw.map(({team,rs})=>{
+    const n={};
+    dims.forEach(d=>n[d]=norm(rs[d],ranges[d].min,ranges[d].max));
+    n.goalsAgainst=1-n.goalsAgainst;
+    const c=Object.keys(weights).filter(k=>dims.includes(k)).reduce((s,k)=>s+(n[k]||0)*(weights[k]||0),0);
+    const drivers=dims.map(k=>({factor:k,normalisedScore:n[k]||0,weight:weights[k]||0,contribution:(n[k]||0)*(weights[k]||0),rawValue:rs[k]})).sort((a,b)=>b.contribution-a.contribution);
+    return {team,composite:c,breakdown:drivers};
+  });
+  const total=scored.reduce((s,d)=>s+d.composite,0);
+  return scored.map(({team,composite,breakdown})=>({...team,probability:total>0?Math.round(composite/total*10000)/100:0,breakdown})).sort((a,b)=>b.probability-a.probability);
+}
+
+// ── Components ─────────────────────────────────────────────────────────────────
+const { useState, useEffect, useCallback } = React;
+const { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } = Recharts;
+
+const PALETTE = ['#10b981','#3b82f6','#f59e0b','#ef4444','#8b5cf6','#ec4899','#06b6d4','#84cc16'];
+const MEDALS = ['🥇','🥈','🥉'];
+const MEDAL_RINGS = ['ring-yellow-400','ring-gray-400','ring-amber-600'];
+const MEDAL_BG = ['bg-yellow-400/10','bg-gray-400/10','bg-amber-600/10'];
+
+function TopCard({team, rank}) {
+  const [exp, setExp] = useState(false);
+  return (
+    <div className={`rounded-2xl border border-white/10 p-5 flex flex-col gap-3 ${MEDAL_BG[rank]} ring-1 ${MEDAL_RINGS[rank]}`}>
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <span className="text-4xl">{team.flag}</span>
+          <div>
+            <div className="flex items-center gap-2">
+              <span className="text-lg">{MEDALS[rank]}</span>
+              <h2 className="text-lg font-bold text-white">{team.name}</h2>
+            </div>
+            <p className="text-xs text-gray-400 uppercase tracking-wide">{team.currentStage} · {team.wins}W {team.draws}D {team.losses}L</p>
+          </div>
+        </div>
+        <div className="text-right">
+          <p className="text-3xl font-black text-white">{team.probability.toFixed(1)}%</p>
+          <p className="text-xs text-gray-500">win probability</p>
+        </div>
+      </div>
+      <div className="h-2 rounded-full bg-white/10 overflow-hidden">
+        <div className="h-full rounded-full bg-gradient-to-r from-emerald-500 to-teal-400 transition-all duration-700" style={{width:`${Math.min(100,team.probability*4)}%`}} />
+      </div>
+      <div className="flex flex-wrap gap-1.5">
+        {[['GF',team.goalsFor],['GA',team.goalsAgainst],['SoT',team.shotsOnTarget],['Poss',`${team.possession}%`],['Pass',`${team.passAccuracy}%`]].map(([l,v])=>(
+          <span key={l} className="inline-flex items-center gap-1 bg-white/5 rounded-full px-2 py-0.5 text-xs text-gray-300">
+            <span className="text-gray-500">{l}</span><span className="font-medium text-white">{v}</span>
+          </span>
+        ))}
+      </div>
+      <button onClick={()=>setExp(e=>!e)} className="text-left text-xs text-emerald-400 hover:text-emerald-300 transition-colors flex items-center gap-1">
+        <span>{exp?'▾':'▸'}</span> Why this team?
+      </button>
+      {exp && (
+        <div className="space-y-2 border-t border-white/10 pt-3">
+          {(team.breakdown||[]).slice(0,4).map(d=>(
+            <div key={d.factor} className="flex items-center gap-2">
+              <div className="flex-1">
+                <div className="flex justify-between text-xs mb-0.5">
+                  <span className="text-gray-400">{FACTOR_LABELS[d.factor]||d.factor}</span>
+                  <span className="text-gray-300 font-medium">{(d.normalisedScore*100).toFixed(0)}/100</span>
+                </div>
+                <div className="h-1.5 rounded-full bg-white/10">
+                  <div className="h-full rounded-full bg-emerald-500/70" style={{width:`${d.normalisedScore*100}%`}} />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function Leaderboard({teams}) {
+  const [expanded, setExpanded] = useState(null);
+  const maxP = teams[0]?.probability||1;
+  const stageColors = {Group:'text-gray-400 bg-gray-400/10',R32:'text-blue-400 bg-blue-400/10',R16:'text-purple-400 bg-purple-400/10',QF:'text-yellow-400 bg-yellow-400/10',SF:'text-orange-400 bg-orange-400/10',F:'text-emerald-400 bg-emerald-400/10'};
+  return (
+    <section>
+      <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-4">All Teams — Ranked</h2>
+      <div className="rounded-2xl border border-white/10 overflow-hidden">
+        <table className="w-full">
+          <thead><tr className="border-b border-white/10 bg-white/[0.02]">
+            <th className="py-2 pl-4 text-left text-xs text-gray-600">#</th>
+            <th className="py-2 px-2 text-left text-xs text-gray-600">Team</th>
+            <th className="py-2 px-2 text-left text-xs text-gray-600 hidden sm:table-cell">Stage</th>
+            <th className="py-2 px-2 text-left text-xs text-gray-600 hidden md:table-cell">Goals</th>
+            <th className="py-2 px-2 text-left text-xs text-gray-600">Probability</th>
+            <th className="py-2 pr-4 pl-2"/>
+          </tr></thead>
+          <tbody>
+            {teams.map((team,i)=>(
+              <React.Fragment key={team.teamId}>
+                <tr className="border-b border-white/5 hover:bg-white/[0.02] transition-colors cursor-pointer" onClick={()=>setExpanded(expanded===team.teamId?null:team.teamId)}>
+                  <td className="py-3 pl-4 pr-2 text-gray-500 text-sm">{i+1}</td>
+                  <td className="py-3 px-2"><div className="flex items-center gap-2"><span className="text-2xl">{team.flag}</span><div><p className="font-semibold text-white text-sm">{team.name}</p><p className="text-xs text-gray-500">{team.wins}W {team.draws}D {team.losses}L</p></div></div></td>
+                  <td className="py-3 px-2 hidden sm:table-cell"><span className={`text-xs font-medium px-2 py-0.5 rounded-full ${stageColors[team.currentStage]||'text-gray-400'}`}>{team.currentStage}</span></td>
+                  <td className="py-3 px-2 hidden md:table-cell text-sm text-gray-300">{team.goalsFor}<span className="text-gray-600">–</span>{team.goalsAgainst}</td>
+                  <td className="py-3 px-2 w-44"><div className="flex items-center gap-2"><div className="flex-1 h-2 rounded-full bg-white/10 overflow-hidden"><div className="h-full rounded-full bg-gradient-to-r from-teal-600 to-emerald-400 transition-all" style={{width:`${(team.probability/maxP)*100}%`}}/></div><span className="text-sm font-bold text-white w-12 text-right">{team.probability.toFixed(1)}%</span></div></td>
+                  <td className="py-3 pr-4 text-gray-600 text-xs">{expanded===team.teamId?'▾':'▸'}</td>
+                </tr>
+                {expanded===team.teamId && (
+                  <tr className="bg-white/[0.015] border-b border-white/5"><td colSpan={6} className="px-6 py-4">
+                    <p className="text-xs text-gray-500 mb-3 uppercase tracking-wide">Factor Breakdown</p>
+                    {(team.breakdown||[]).map(d=>(
+                      <div key={d.factor} className="flex items-center gap-3 py-1">
+                        <span className="w-36 text-xs text-gray-400 shrink-0">{FACTOR_LABELS[d.factor]||d.factor}</span>
+                        <div className="flex-1 h-1.5 rounded-full bg-white/10"><div className="h-full rounded-full bg-teal-500/70" style={{width:`${d.normalisedScore*100}%`}}/></div>
+                        <span className="text-xs text-gray-400 w-8 text-right">{(d.normalisedScore*100).toFixed(0)}</span>
+                      </div>
+                    ))}
+                  </td></tr>
+                )}
+              </React.Fragment>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  );
+}
+
+function MatchFeed({matches}) {
+  const stageLabel={Group:'Group Stage',R32:'Round of 32',R16:'Round of 16',QF:'Quarter-final',SF:'Semi-final',F:'Final'};
+  const sorted=[...matches].sort((a,b)=>new Date(b.date)-new Date(a.date));
+  const finished=sorted.filter(m=>m.status==='FINISHED');
+  const upcoming=sorted.filter(m=>m.status!=='FINISHED');
+  const Card = ({m}) => {
+    const d=new Date(m.date);
+    const fin=m.status==='FINISHED';
+    return (
+      <div className={`rounded-xl border px-4 py-3 flex items-center gap-3 ${fin?'border-white/10 bg-white/[0.02]':'border-blue-500/20 bg-blue-500/5'}`}>
+        <div className="text-center w-16 shrink-0">
+          <p className="text-xs text-gray-500">{d.toLocaleDateString('en-GB',{day:'numeric',month:'short'})}</p>
+          <span className={`text-xs font-medium px-1.5 py-0.5 rounded mt-1 inline-block ${fin?'bg-gray-700 text-gray-300':'bg-blue-500/20 text-blue-400'}`}>{stageLabel[m.stage]||m.stage}</span>
+        </div>
+        <div className="flex-1 flex items-center justify-between gap-2">
+          <span className="font-medium text-sm text-white text-right flex-1 text-right">{m.homeTeamName}</span>
+          <div className="shrink-0 w-20 text-center">
+            {fin?<span className="text-xl font-black text-white">{m.homeScore} <span className="text-gray-600">–</span> {m.awayScore}</span>:<span className="text-sm text-gray-500">vs</span>}
+          </div>
+          <span className="font-medium text-sm text-white flex-1">{m.awayTeamName}</span>
+        </div>
+        {fin&&m.stats?.possession&&<div className="text-right shrink-0 hidden sm:block"><p className="text-xs text-gray-600">Poss</p><p className="text-xs text-gray-400">{m.stats.possession.home}%–{m.stats.possession.away}%</p></div>}
+      </div>
+    );
+  };
+  return (
+    <section>
+      <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-4">Match Results</h2>
+      <div className="space-y-2">
+        {upcoming.length>0&&<><p className="text-xs text-blue-400 font-medium uppercase tracking-wide px-1 pt-1">Upcoming</p>{upcoming.map(m=><Card key={m.matchId} m={m}/>)}<p className="text-xs text-gray-600 font-medium uppercase tracking-wide px-1 pt-3">Completed</p></>}
+        {finished.map(m=><Card key={m.matchId} m={m}/>)}
+      </div>
+    </section>
+  );
+}
+
+function ProbabilityChart({teams}) {
+  const withHist=teams.filter(t=>t.probabilityHistory?.length>1);
+  const [sel,setSel]=useState(new Set(withHist.slice(0,5).map(t=>t.name)));
+  if (!withHist.length) return <div className="rounded-2xl border border-white/10 p-8 text-center text-gray-500 text-sm">No probability history yet.</div>;
+  const allTs=[...new Set(withHist.flatMap(t=>t.probabilityHistory.map(h=>h.timestamp)))].sort();
+  const data=allTs.map(ts=>{ const p={label:new Date(ts).toLocaleDateString('en-GB',{day:'numeric',month:'short'})}; withHist.forEach(t=>{ const e=t.probabilityHistory.find(h=>h.timestamp===ts); if(e) p[t.name]=e.probability; }); return p; });
+  const CustomTT=({active,payload,label})=>{
+    if(!active||!payload?.length) return null;
+    return <div className="bg-gray-900 border border-white/10 rounded-xl px-3 py-2 shadow-xl"><p className="text-xs text-gray-500 mb-1">{label}</p>{[...payload].sort((a,b)=>b.value-a.value).map(p=><p key={p.name} className="text-xs" style={{color:p.color}}>{p.name}: <b>{p.value?.toFixed(1)}%</b></p>)}</div>;
+  };
+  return (
+    <section>
+      <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-4">Win Probability Over Tournament</h2>
+      <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-4">
+        <div className="flex flex-wrap gap-2 mb-4">
+          {withHist.map((t,i)=>{ const c=PALETTE[i%PALETTE.length]; const a=sel.has(t.name); return (
+            <button key={t.teamId} onClick={()=>setSel(p=>{const n=new Set(p);a?n.delete(t.name):n.add(t.name);return n;})} className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium border transition-all ${a?'text-white':'border-white/10 text-gray-500'}`} style={a?{backgroundColor:c+'30',borderColor:c}:{}}>
+              <span className="w-2 h-2 rounded-full shrink-0" style={{backgroundColor:a?c:'#4b5563'}}/>{t.flag} {t.name}
+            </button>
+          );})}
+        </div>
+        <ResponsiveContainer width="100%" height={280}>
+          <LineChart data={data} margin={{top:5,right:20,left:0,bottom:5}}>
+            <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)"/>
+            <XAxis dataKey="label" tick={{fill:'#6b7280',fontSize:11}} axisLine={{stroke:'rgba(255,255,255,0.1)'}} tickLine={false}/>
+            <YAxis tick={{fill:'#6b7280',fontSize:11}} axisLine={false} tickLine={false} tickFormatter={v=>`${v}%`} width={42}/>
+            <Tooltip content={<CustomTT/>}/>
+            {withHist.map((t,i)=>sel.has(t.name)&&<Line key={t.teamId} type="monotone" dataKey={t.name} stroke={PALETTE[i%PALETTE.length]} strokeWidth={2} dot={{r:3}} activeDot={{r:5}} connectNulls/>)}
+          </LineChart>
+        </ResponsiveContainer>
+      </div>
+    </section>
+  );
+}
+
+function AdminPanel({weights, setWeights}) {
+  const wkeys=['goalsFor','goalsAgainst','shotAccuracy','shotsOnTarget','possession','passAccuracy','form','opponentStrength','knockoutBonus'];
+  const total=wkeys.reduce((s,k)=>s+(weights[k]||0),0);
+  return (
+    <div className="max-w-xl mx-auto space-y-6">
+      <div><h1 className="text-2xl font-black text-white">Admin Panel</h1><p className="text-gray-500 text-sm mt-1">Tune model weights in real-time. Changes apply immediately to the leaderboard.</p></div>
+      <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-5 space-y-4">
+        <div className="flex items-center justify-between">
+          <h2 className="text-sm font-semibold text-white">Model Weights</h2>
+          <span className={`text-xs ${Math.abs(total-1)>0.02?'text-yellow-400':'text-emerald-400'}`}>Total: {total.toFixed(2)} {Math.abs(total-1)>0.02?'⚠':'✓'}</span>
+        </div>
+        {wkeys.map(k=>(
+          <div key={k} className="flex items-center gap-3">
+            <span className="text-sm text-gray-400 w-36 shrink-0">{FACTOR_LABELS[k]}</span>
+            <input type="range" min={0} max={0.5} step={0.01} value={weights[k]||0} onChange={e=>setWeights(w=>({...w,[k]:parseFloat(e.target.value)}))} className="flex-1"/>
+            <span className="text-sm font-mono text-white w-12 text-right">{(weights[k]||0).toFixed(2)}</span>
+          </div>
+        ))}
+        <p className="text-xs text-gray-600 pt-1">Decay λ: {weights.formDecayLambda} · Knockout multipliers: Group {weights.knockoutMultipliers?.Group} → Final {weights.knockoutMultipliers?.F}</p>
+      </div>
+      <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-5">
+        <h2 className="text-sm font-semibold text-white mb-3">Manual Match Entry</h2>
+        <p className="text-xs text-gray-500">In the full app, submit a POST to <code className="bg-white/5 px-1 rounded">/api/matches</code> with match result JSON. Password-protected via <code className="bg-white/5 px-1 rounded">x-admin-password</code> header.</p>
+      </div>
+    </div>
+  );
+}
+
+// ── App ────────────────────────────────────────────────────────────────────────
+function App() {
+  const [tab, setTab] = useState('dashboard');
+  const [weights, setWeights] = useState(DEFAULT_WEIGHTS);
+  const teams = React.useMemo(() => predict(MOCK_TEAMS, MOCK_MATCHES, weights), [weights]);
+
+  const NAV = [{id:'dashboard',label:'Dashboard'},{id:'matches',label:'Matches'},{id:'chart',label:'History'},{id:'admin',label:'Admin ⚙'}];
+
+  return (
+    <div className="min-h-screen bg-gray-950">
+      {/* Header */}
+      <header className="border-b border-white/10 sticky top-0 z-20 bg-gray-950/95 backdrop-blur-sm">
+        <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <span className="text-2xl">🏆</span>
+            <div>
+              <h1 className="text-sm font-black text-white leading-none">WC2026 Predictor</h1>
+              <p className="text-xs text-gray-600">Demo · mock data</p>
+            </div>
+          </div>
+          <nav className="flex gap-1 flex-wrap">
+            {NAV.map(n=>(
+              <button key={n.id} onClick={()=>setTab(n.id)} className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${tab===n.id?'bg-emerald-600 text-white':'text-gray-500 hover:text-gray-300'}`}>{n.label}</button>
+            ))}
+          </nav>
+        </div>
+      </header>
+
+      <main className="max-w-6xl mx-auto px-4 py-8">
+        {tab==='dashboard' && (
+          <div className="space-y-10">
+            <div className="text-center py-4">
+              <p className="text-xs text-gray-600 uppercase tracking-widest mb-1">FIFA World Cup 2026</p>
+              <h1 className="text-4xl md:text-5xl font-black text-white">Who Will Win?</h1>
+              <p className="text-gray-500 mt-2 text-sm max-w-xl mx-auto">Statistical model updating live as match data flows in. Powered by goals, shots, possession, form, and stage progression.</p>
+            </div>
+            <section>
+              <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-4">Top Contenders</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {teams.slice(0,3).map((t,i)=><TopCard key={t.teamId} team={t} rank={i}/>)}
+              </div>
+            </section>
+            <Leaderboard teams={teams}/>
+          </div>
+        )}
+        {tab==='matches' && <MatchFeed matches={MOCK_MATCHES}/>}
+        {tab==='chart' && <ProbabilityChart teams={teams}/>}
+        {tab==='admin' && <AdminPanel weights={weights} setWeights={setWeights}/>}
+      </main>
+
+      <footer className="border-t border-white/5 mt-16 py-6 text-center text-xs text-gray-700">
+        World Cup 2026 Winner Predictor · Statistical model, not a betting product
+      </footer>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+</body>
+</html>

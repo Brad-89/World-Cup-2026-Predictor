@@ -1,0 +1,1202 @@
+[
+  {
+    "teamId": "758",
+    "name": "Uruguay",
+    "shortName": "Uruguay",
+    "crestUrl": "https://crests.football-data.org/758.svg",
+    "flag": "URY",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.153Z"
+  },
+  {
+    "teamId": "759",
+    "name": "Germany",
+    "shortName": "Germany",
+    "crestUrl": "https://crests.football-data.org/759.svg",
+    "flag": "GER",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.153Z"
+  },
+  {
+    "teamId": "760",
+    "name": "Spain",
+    "shortName": "Spain",
+    "crestUrl": "https://crests.football-data.org/760.svg",
+    "flag": "ESP",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.153Z"
+  },
+  {
+    "teamId": "761",
+    "name": "Paraguay",
+    "shortName": "Paraguay",
+    "crestUrl": "https://crests.football-data.org/761.svg",
+    "flag": "PAR",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.153Z"
+  },
+  {
+    "teamId": "762",
+    "name": "Argentina",
+    "shortName": "Argentina",
+    "crestUrl": "https://crests.football-data.org/762.png",
+    "flag": "ARG",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.153Z"
+  },
+  {
+    "teamId": "763",
+    "name": "Ghana",
+    "shortName": "Ghana",
+    "crestUrl": "https://crests.football-data.org/ghana.svg",
+    "flag": "GHA",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.153Z"
+  },
+  {
+    "teamId": "764",
+    "name": "Brazil",
+    "shortName": "Brazil",
+    "crestUrl": "https://crests.football-data.org/764.svg",
+    "flag": "BRA",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.153Z"
+  },
+  {
+    "teamId": "765",
+    "name": "Portugal",
+    "shortName": "Portugal",
+    "crestUrl": "https://crests.football-data.org/765.svg",
+    "flag": "POR",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.153Z"
+  },
+  {
+    "teamId": "766",
+    "name": "Japan",
+    "shortName": "Japan",
+    "crestUrl": "https://crests.football-data.org/766.svg",
+    "flag": "JPN",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.153Z"
+  },
+  {
+    "teamId": "769",
+    "name": "Mexico",
+    "shortName": "Mexico",
+    "crestUrl": "https://crests.football-data.org/769.svg",
+    "flag": "MEX",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.153Z"
+  },
+  {
+    "teamId": "770",
+    "name": "England",
+    "shortName": "England",
+    "crestUrl": "https://crests.football-data.org/770.svg",
+    "flag": "ENG",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.153Z"
+  },
+  {
+    "teamId": "771",
+    "name": "United States",
+    "shortName": "USA",
+    "crestUrl": "https://crests.football-data.org/usa.svg",
+    "flag": "USA",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.153Z"
+  },
+  {
+    "teamId": "772",
+    "name": "South Korea",
+    "shortName": "Korea Republic",
+    "crestUrl": "https://crests.football-data.org/772.png",
+    "flag": "KOR",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.153Z"
+  },
+  {
+    "teamId": "773",
+    "name": "France",
+    "shortName": "France",
+    "crestUrl": "https://crests.football-data.org/773.svg",
+    "flag": "FRA",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.153Z"
+  },
+  {
+    "teamId": "774",
+    "name": "South Africa",
+    "shortName": "South Africa",
+    "crestUrl": "https://crests.football-data.org/9396.svg",
+    "flag": "RSA",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.153Z"
+  },
+  {
+    "teamId": "778",
+    "name": "Algeria",
+    "shortName": "Algeria",
+    "crestUrl": "https://crests.football-data.org/algeria.svg",
+    "flag": "ALG",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.153Z"
+  },
+  {
+    "teamId": "779",
+    "name": "Australia",
+    "shortName": "Australia",
+    "crestUrl": "https://crests.football-data.org/779.svg",
+    "flag": "AUS",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.153Z"
+  },
+  {
+    "teamId": "783",
+    "name": "New Zealand",
+    "shortName": "New Zealand",
+    "crestUrl": "https://crests.football-data.org/783.svg",
+    "flag": "NZL",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.153Z"
+  },
+  {
+    "teamId": "788",
+    "name": "Switzerland",
+    "shortName": "Switzerland",
+    "crestUrl": "https://crests.football-data.org/788.svg",
+    "flag": "SUI",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.153Z"
+  },
+  {
+    "teamId": "791",
+    "name": "Ecuador",
+    "shortName": "Ecuador",
+    "crestUrl": "https://crests.football-data.org/791.svg",
+    "flag": "ECU",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.153Z"
+  },
+  {
+    "teamId": "792",
+    "name": "Sweden",
+    "shortName": "Sweden",
+    "crestUrl": "https://crests.football-data.org/792.svg",
+    "flag": "SWE",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.153Z"
+  },
+  {
+    "teamId": "798",
+    "name": "Czechia",
+    "shortName": "Czechia",
+    "crestUrl": "https://crests.football-data.org/798.svg",
+    "flag": "CZE",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.153Z"
+  },
+  {
+    "teamId": "799",
+    "name": "Croatia",
+    "shortName": "Croatia",
+    "crestUrl": "https://crests.football-data.org/799.svg",
+    "flag": "CRO",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.153Z"
+  },
+  {
+    "teamId": "801",
+    "name": "Saudi Arabia",
+    "shortName": "Saudi Arabia",
+    "crestUrl": "https://crests.football-data.org/saudi_arabia.svg",
+    "flag": "KSA",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.153Z"
+  },
+  {
+    "teamId": "802",
+    "name": "Tunisia",
+    "shortName": "Tunisia",
+    "crestUrl": "https://crests.football-data.org/tunisia.svg",
+    "flag": "TUN",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.153Z"
+  },
+  {
+    "teamId": "803",
+    "name": "Turkey",
+    "shortName": "Turkey",
+    "crestUrl": "https://crests.football-data.org/803.svg",
+    "flag": "TUR",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.153Z"
+  },
+  {
+    "teamId": "804",
+    "name": "Senegal",
+    "shortName": "Senegal",
+    "crestUrl": "https://crests.football-data.org/senegal.svg",
+    "flag": "SEN",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.153Z"
+  },
+  {
+    "teamId": "805",
+    "name": "Belgium",
+    "shortName": "Belgium",
+    "crestUrl": "https://crests.football-data.org/805.svg",
+    "flag": "BEL",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.153Z"
+  },
+  {
+    "teamId": "815",
+    "name": "Morocco",
+    "shortName": "Morocco",
+    "crestUrl": "https://crests.football-data.org/morocco.svg",
+    "flag": "MAR",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.153Z"
+  },
+  {
+    "teamId": "816",
+    "name": "Austria",
+    "shortName": "Austria",
+    "crestUrl": "https://crests.football-data.org/816.svg",
+    "flag": "AUT",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.153Z"
+  },
+  {
+    "teamId": "818",
+    "name": "Colombia",
+    "shortName": "Colombia",
+    "crestUrl": "https://crests.football-data.org/818.svg",
+    "flag": "COL",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.153Z"
+  },
+  {
+    "teamId": "825",
+    "name": "Egypt",
+    "shortName": "Egypt",
+    "crestUrl": "https://crests.football-data.org/825.svg",
+    "flag": "EGY",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.153Z"
+  },
+  {
+    "teamId": "828",
+    "name": "Canada",
+    "shortName": "Canada",
+    "crestUrl": "https://crests.football-data.org/canada.svg",
+    "flag": "CAN",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.153Z"
+  },
+  {
+    "teamId": "836",
+    "name": "Haiti",
+    "shortName": "Haiti",
+    "crestUrl": "https://crests.football-data.org/haiti.svg",
+    "flag": "HAI",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.153Z"
+  },
+  {
+    "teamId": "840",
+    "name": "Iran",
+    "shortName": "Iran",
+    "crestUrl": "https://crests.football-data.org/iran.svg",
+    "flag": "IRN",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.153Z"
+  },
+  {
+    "teamId": "1060",
+    "name": "Bosnia-Herzegovina",
+    "shortName": "Bosnia-H.",
+    "crestUrl": "https://crests.football-data.org/bosnia.svg",
+    "flag": "BIH",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.153Z"
+  },
+  {
+    "teamId": "1836",
+    "name": "Panama",
+    "shortName": "Panama",
+    "crestUrl": "https://crests.football-data.org/panama.svg",
+    "flag": "PAN",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.153Z"
+  },
+  {
+    "teamId": "1930",
+    "name": "Cape Verde Islands",
+    "shortName": "Cape Verde",
+    "crestUrl": "https://crests.football-data.org/cape_verde.svg",
+    "flag": "CPV",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.157Z"
+  },
+  {
+    "teamId": "1934",
+    "name": "Congo DR",
+    "shortName": "Congo DR",
+    "crestUrl": "https://crests.football-data.org/congo_dr.svg",
+    "flag": "COD",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.157Z"
+  },
+  {
+    "teamId": "1935",
+    "name": "Ivory Coast",
+    "shortName": "Ivory Coast",
+    "crestUrl": "https://crests.football-data.org/787.svg",
+    "flag": "CIV",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.157Z"
+  },
+  {
+    "teamId": "8030",
+    "name": "Qatar",
+    "shortName": "Qatar",
+    "crestUrl": "https://crests.football-data.org/8030.svg",
+    "flag": "QAT",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.157Z"
+  },
+  {
+    "teamId": "8049",
+    "name": "Jordan",
+    "shortName": "Jordan",
+    "crestUrl": "https://crests.football-data.org/8049.png",
+    "flag": "JOR",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.157Z"
+  },
+  {
+    "teamId": "8062",
+    "name": "Iraq",
+    "shortName": "Iraq",
+    "crestUrl": "https://crests.football-data.org/iraq.svg",
+    "flag": "IRQ",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.157Z"
+  },
+  {
+    "teamId": "8070",
+    "name": "Uzbekistan",
+    "shortName": "Uzbekistan",
+    "crestUrl": "https://crests.football-data.org/8070.png",
+    "flag": "UZB",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.157Z"
+  },
+  {
+    "teamId": "8601",
+    "name": "Netherlands",
+    "shortName": "Netherlands",
+    "crestUrl": "https://crests.football-data.org/8601.svg",
+    "flag": "NED",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.157Z"
+  },
+  {
+    "teamId": "8872",
+    "name": "Norway",
+    "shortName": "Norway",
+    "crestUrl": "https://crests.football-data.org/813.svg",
+    "flag": "NOR",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.157Z"
+  },
+  {
+    "teamId": "8873",
+    "name": "Scotland",
+    "shortName": "Scotland",
+    "crestUrl": "https://crests.football-data.org/814.svg",
+    "flag": "SCO",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.157Z"
+  },
+  {
+    "teamId": "9460",
+    "name": "Curaçao",
+    "shortName": "Curaçao",
+    "crestUrl": "https://crests.football-data.org/curacao.svg",
+    "flag": "CUW",
+    "gamesPlayed": 0,
+    "wins": 0,
+    "draws": 0,
+    "losses": 0,
+    "goalsFor": 0,
+    "goalsAgainst": 0,
+    "shotsOnTarget": 0,
+    "shotsTotal": 0,
+    "possession": 0,
+    "passAccuracy": 0,
+    "currentStage": "Group",
+    "probabilityHistory": [
+      {
+        "timestamp": "2026-06-11T14:19:57.501Z",
+        "probability": 2.08
+      }
+    ],
+    "lastUpdated": "2026-06-11T14:20:02.157Z"
+  }
+]
