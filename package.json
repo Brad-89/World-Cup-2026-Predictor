@@ -7,7 +7,7 @@
     "dev:client": "cd client && npm run dev",
     "install:all": "npm install && cd server && npm install && cd ../client && npm install",
     "build": "cd client && npm install && npm run build",
-    "start": "cd server && npm install && node index.js"
+    "start": "NODE_ENV=production node server/index.js"
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
